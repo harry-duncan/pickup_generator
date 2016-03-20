@@ -1,8 +1,7 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
   $('#submit').on('click', function (e) {
     e.preventDefault();
-    console.log("running")
 
     var $verb = $('#verb').val();
     var $adjective = $('#adjective').val();
@@ -12,15 +11,36 @@ $(document).ready(function(){
     var $profession = $('#profession').val();
     var $animal = $('#animal').val();
 
-    $.ajax("http://api.giphy.com/v1/gifs/search?q=" + $verb + "+" + $adjective + "&api_key=dc6zaTOxFJmzC", {
+    var formCheck = function () {
+      if ($verb && $adjective){
+        ajax();
+      } else {
+        $verb = "hot";
+        $adjective = "chick";
+        ajax();
+      }
+    };
+
+    console.log( $verb, $adjective);
+
+    var ajax = function () {
+
+      $.ajax("http://api.giphy.com/v1/gifs/search?q=" + $verb + "+" + $adjective + "&api_key=dc6zaTOxFJmzC", {
       type:'GET'
 
-    }).done(function(data){
-      console.log("get request successfull")
-      var img = data.data[0].images.downsized.url;
+      }).done(function(data) {
+
+      var img = data.data[Math.floor(Math.random() * data.data.length)].images.downsized.url;
+
       $('.gif').empty();
       $('.gif').append('<img src="' + img + '">');
-    })
+
+      });
+
+    };
+
+    formCheck();
+
   });
 
 });
