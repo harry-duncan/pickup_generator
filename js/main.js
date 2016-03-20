@@ -1,16 +1,26 @@
-var noun, pronoun, verb, adjective, food, greeting, object;
-
 $(document).ready(function(){
 
-  $('.main').on('submit', '.form', function (e) {
+  $('#submit').on('click', function (e) {
     e.preventDefault();
-    $.ajax("http://api.giphy.com/v1/gifs/search?q=" + noun + "+" + adjective + "&api_key=dc6zaTOxFJmzC", {
+    console.log("running")
+
+    var $verb = $('#verb').val();
+    var $adjective = $('#adjective').val();
+    var $food = $('#food').val();
+    var $greeting = $('#greeting').val();
+    var $object = $('#object').val();
+    var $profession = $('#profession').val();
+    var $animal = $('#animal').val();
+
+    $.ajax("http://api.giphy.com/v1/gifs/search?q=" + $verb + "+" + $adjective + "&api_key=dc6zaTOxFJmzC", {
       type:'GET'
-    }).done(function(){
-      console.log("get request successful");
-      $('.gif').append("<img>");
+
+    }).done(function(data){
+      console.log("get request successfull")
+      var img = data.data[0].images.downsized.url;
+      $('.gif').empty();
+      $('.gif').append('<img src="' + img + '">');
     })
   });
-
 
 });

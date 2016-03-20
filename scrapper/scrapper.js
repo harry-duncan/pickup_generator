@@ -2,11 +2,11 @@ var Xray = require('x-ray');
 
 var xray = new Xray();
 
-xray('http://pickup-lines.net', 'span.loop-entry-line', 
+xray('http://google.com', 'a',
     [
-        {   
-            pickUpLine: ''
+        {
+            a: '',
+            href: '@href'
         }
     ])
-    .paginate('.next@href')
     .write('pickUpLines-spec.json');
