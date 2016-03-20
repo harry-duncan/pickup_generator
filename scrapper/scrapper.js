@@ -2,10 +2,10 @@ var Xray = require('x-ray');
 
 var xray = new Xray();
 
-xray('http://google.com', 'a', 
+xray('http://google.com', 'a',
     [
         {
-            a: '', 
+            a: '',
             href: '@href'
         }
     ])
