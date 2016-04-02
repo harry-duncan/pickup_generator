@@ -1,0 +1,87 @@
+/**
+ * SCSS: Main
+ */
+/**
+ * Base: Reset
+ */
+*, *:before, *:after {
+  border: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  font-smoothing: antialiased;
+  line-height: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+address, article, aside, audio, blockquote,
+canvas, dd, div, dl, fieldset, figcaption,
+figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, hr, noscript, ol, output, p, pre,
+section, ul, video {
+  display: block;
+}
+
+a, abbr, b, bdo, br, button, cite, code, dfn,
+em, i, img, input, kbd, label, map, object, q,
+samp, select, small, span, strong, sub, sup,
+textarea, var {
+  display: inline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+}
+
+/**
+ * Base: Normalise
+ */
+html {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  line-height: 1.5em;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-smoothing: antialiased;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+}
+
+img {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+html:-moz-full-screen-ancestor {
+  background-color: inherit;
+}
+
+html:-webkit-full-screen-ancestor {
+  background-color: inherit;
+}
+
+html:full-screen-ancestor {
+  background-color: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */
