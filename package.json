@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/harry-duncan/pickup_generator#readme",
   "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
     "browser-sync": "^2.11.2",
     "browserify": "^12.0.1",
     "chalk": "^1.1.3",
