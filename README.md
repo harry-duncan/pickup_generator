@@ -13,15 +13,15 @@ A pickup line generator
 
 1. npm install
   1. Check your gulp version
-    * gulp -v
+    * ```gulp -v```
       * if you dont have gulp 4.0 installed follow these steps
-        1. npm install -g "gulpjs/gulp-cli#4.0"
-        2. npm install "gulpjs/gulp#4.0" --save-dev
+        1. ```npm install -g "gulpjs/gulp-cli#4.0"```
+        2. ```npm install "gulpjs/gulp#4.0" --save-dev```
       * if you have gulp but its not 4.0
-        1. npm uninstall -g gulp
-        2. npm install -g "gulpjs/gulp-cli#4.0"
-        3. npm uninstall gulp --save-dev
-        4. npm install "gulpjs/gulp#4.0" --save-dev
+        1. ```npm uninstall -g gulp```
+        2. ```npm install -g "gulpjs/gulp-cli#4.0"```
+        3. ```npm uninstall gulp --save-dev```
+        4. ```npm install "gulpjs/gulp#4.0" --save-dev```
       
       
 Then run `gulp`
