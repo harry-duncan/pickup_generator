@@ -29,12 +29,12 @@ $(document).ready(function() {
       type:'GET'
 
       }).done(function(data) {
-
+      console.log(data);
       var img = data.data[Math.floor(Math.random() * data.data.length)].images.downsized.url;
 
       $('.gif').empty();
       $('.gif').append('<img src="' + img + '">');
-
+      $('.refresh').append('<a href="javascript:location.reload(true)">Try again bitch!</a>');
       });
 
     };

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/harry-duncan/pickup_generator/issues"
   },
-  "homepage": "https://github.com/harry-duncan/pickup_generator#readme"
+  "homepage": "https://github.com/harry-duncan/pickup_generator#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
 }
